@@ -1,7 +1,10 @@
 class CreatePosts < ActiveRecord::Migration
-  def up
+  def change
+  	create_table :posts do |t|
+  		t.text :body
+  		t.string :title 
+  		t.timestamps
+  	end
   end
 
-  def down
-  end
 end
